@@ -5,7 +5,7 @@
 
 ^https:\/\/footprint-api\.quthing\.com\/vip\/state 
 url script-response-body 
-lgzj.js
+https://github.com/xiaowendong1/iosjs/blob/xiaowendong1/cgingxie/lgzj.js
 
 [mitm]
 
