@@ -8,7 +8,7 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/footprint-api.quthing.com\/vip\/state.+$ url script-response-body https://github.com/xiaowendong1/iosjs/blob/xiaowendong1/zuji.js
+^http[s]?:\/\/footprint-api.quthing.com\/vip\/state.+$ url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/zuji.js
 [mitm] 
 hostname = *.quthing.*
 *******************************
