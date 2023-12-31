@@ -8,7 +8,7 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/api.pinduoduo.com\/api\/alexa\/cells\/hub\/v3.+$ url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/pingduoduo.js
+^https:\/\/api.pinduoduo.com\/api\/alexa\/cells\/hub\/v3 url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/pingduoduo.js
 [mitm] 
 hostname =api.pinduoduo.com
 *******************************
