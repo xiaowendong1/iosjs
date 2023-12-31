@@ -8,9 +8,9 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/api.pinduoduo.com\/api\/alexa\/cells\/hub\/v3.+$ url script-response-body pinduoduo.js
+^http[s]?:\/\/api.pinduoduo.com\/api\/alexa\/cells\/hub\/v3.+$ url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/pingduoduo.js
 [mitm] 
-hostname = *.pinduoduo.*
+hostname =api.pinduoduo.com
 *******************************
 Surge
 
@@ -18,7 +18,7 @@ Surge
 ^http[s]?:\/\/api.pinduoduo.com\/api\/alexa\/cells\/hub\/v3.+$ requires-body=1,max-size=0,script-path=pinduoduo.js
 
 [MITM]
-hostname = *.pinduoduo.*
+hostname = api.pinduoduo.com
 
 *******************************/
 var obj = JSON.parse($response.body);
