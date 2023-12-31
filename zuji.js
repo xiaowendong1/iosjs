@@ -8,7 +8,8 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/footprint-api.quthing.com\/vip\/state.+$ url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/zuji.js
+
+^https:\/\/footprint-api\.quthing\.com\/vip\/state url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/zuji.js
 [mitm] 
 hostname = *.quthing.*
 *******************************
@@ -17,13 +18,17 @@ Surge
 [Script]
 ^http[s]?:\/\/footprint-api.quthing.com\/vip\/state.+$ requires-body=1,max-size=0,script-path=quthing.js
 
-[MITM]
-hostname = *.quthing.*
+mitm]
 
+hostname = footprint-api.quthing.com
 *******************************/
-var obj = JSON.parse($response.body);
-    obj.data. validVip= true;
-obj.data.vipType= 1;
-obj.data.trialPeriod= true;
-obj.data. expireTime= 4100335752,;
-    $done({body: JSON.stringify(obj)});
+
+var body = JSON.parse($response.body);
+
+body.data.trialPeriod = false,
+body.data.vipType = 7,
+body.data.validVip = true,
+body.data.expireTime = 4102372800000,
+body.data.vipCount = 999999999,
+
+$done({ body: JSON.stringify(body) });
