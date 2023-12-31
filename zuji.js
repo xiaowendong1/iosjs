@@ -1,11 +1,11 @@
 /*******************************
-  公众号:木木IOS分享
-关注了解更多新科技！！！
+  脚本作者：xiaowendong1
+
 
 脚本名称：灵敢足迹vip获取
 使用声明：️此脚本仅供学习与交流，
         请勿转载与贩卖！️️️
-群1077223830
+
 *******************************
 [rewrite_local]
 
@@ -24,9 +24,9 @@ mitm]
 hostname = footprint-api.quthing.com
 *******************************/
 
-var obj = JSON.parse($response.body);
-    obj.data. validVip= true;
-obj.data.vipType= 7;
-obj.data.trialPeriod= true;
-obj.data. expireTime= 4100335752,;
-    $done({body: JSON.stringify(obj)});
+var body = JSON.parse($response.body);
+    body.data. validVip= true;
+body.data.vipType= 7;
+body.data.trialPeriod= true;
+body.data. expireTime= 4100335752,;
+    $done({body: JSON.stringify(body)});
