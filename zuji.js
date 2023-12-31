@@ -17,7 +17,7 @@ hostname = footprint-api.quthing.com
 Surge
 
 [Script]
-^http[s]?:\/\/footprint-api.quthing.com\/vip\/state.+$ requires-body=1,max-size=0,script-path=quthing.js
+^http[s]?:\/\/footprint-api.quthing.com\/vip\/state.+$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/zuji.js
 
 mitm]
 
