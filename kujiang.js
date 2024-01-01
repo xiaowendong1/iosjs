@@ -8,17 +8,17 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info.+$ url script-response-body kujiang.js
+^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info.+$ url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/kujiang.js
 [mitm] 
-hostname = *.kujiang.*
+hostname = app.kujiang.com
 *******************************
 Surge
 
 [Script]
-^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info.+$ requires-body=1,max-size=0,script-path=kujiang.js
+^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info.+$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/kujiang.js
 
 [MITM]
-hostname = *.kujiang.*
+hostname = app.kujiang.com
 
 *******************************/
 var obj = JSON.parse($response.body);
