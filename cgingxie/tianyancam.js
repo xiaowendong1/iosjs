@@ -8,14 +8,14 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/api.tianyancam.com\/v1\/filter\/overview.+$ url script-response-body tianyancam.js
+^http[s]?:\/\/api.tianyancam.com\/v1\/filter\/overview.+$ url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/cgingxie/tianyancam.js
 [mitm] 
 hostname = http://api.tianyancam.com
 *******************************
 Surge
 
 [Script]
-^http[s]?:\/\/api.tianyancam.com\/v1\/filter\/overview.+$ requires-body=1,max-size=0,script-path=tianyancam.js
+^http[s]?:\/\/api.tianyancam.com\/v1\/filter\/overview.+$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/cgingxie/tianyancam.js
 
 [MITM]
 hostname = http://api.tianyancam.com
