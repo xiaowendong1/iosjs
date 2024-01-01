@@ -8,14 +8,14 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info.+$ url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/kujiang.js
+^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info url script-response-body https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/kujiang.js
 [mitm] 
 hostname = app.kujiang.com
 *******************************
 Surge
 
 [Script]
-^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info.+$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/kujiang.js
+^http[s]?:\/\/app.kujiang.com\/v1\/user\/user_info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/xiaowendong1/iosjs/xiaowendong1/kujiang.js
 
 [MITM]
 hostname = app.kujiang.com
