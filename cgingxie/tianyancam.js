@@ -20,8 +20,8 @@ Surge
 [MITM]
 hostname = http://api.tianyancam.com
 *******************************/
-var obj = JSON.parse($response.body);
-    obj.vipType= "SHUTTER_ON";
-obj. vipContent= false;
-obj.subName= "";
-    $done({body: JSON.stringify(obj)});
+var body = JSON.parse($response.body);
+    body.vipType= "SHUTTER_ON";
+body. vipContent= false;
+body.subName= "";
+    $done({body: JSON.stringify(body)});
